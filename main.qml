@@ -22,6 +22,10 @@ Window {
             color: "purple"
             h: 104
         }
+        ListElement {
+            color: "yellow"
+            h: 256
+        }
     }
     Flickable {
         id: flick
@@ -36,8 +40,6 @@ Window {
         anchors.horizontalCenter: parent.horizontalCenter
         contentHeight: flow.contentHeight
         contentWidth: width
-
-        onGetterChanged: flow.getter = getter
 
         onVisibleChanged: {
             if (visible) {  // only load model once CardView is visible
